@@ -186,7 +186,7 @@
         // console.log("----------------------------------------->"+state);
         $.ajax({
             type : 'GET',
-            url : "http://127.0.0.1:8000/district/",
+            url : "http://routersnetworking.in/district/",
             data : {'state':state}, 
             success: function(response){
               // console.log("district:",response.district_obj);
@@ -225,7 +225,7 @@
             console.log("contact : ", contact_field_value);
             $.ajax({
                 type : 'POST',
-                url : "http://127.0.0.1:8000/contact_form/",
+                url : "http://routersnetworking.in/contact_form/",
                 data : {
                       
                         "name" : name_field_value,
