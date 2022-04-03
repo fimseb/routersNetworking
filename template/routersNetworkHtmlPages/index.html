@@ -1,0 +1,846 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>RoutersNetworking - Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- Favicons -->
+  <link href="{% static "img/favicon.png" %}" rel="icon"/>
+  <link href="{% static "img/apple-touch-icon.png" %}" rel="apple-touch-icon"/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css" rel="stylesheet">
+	 
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- vendor css files -->
+    <!-- aos css files -->
+    <link href="{% static "vendor/aos/aos.css" %}" rel="stylesheet"/>
+    
+    <!-- bootstrap css files -->
+    <link href="{% static "vendor/bootstrap/css/bootstrap.min.css" %}" rel="stylesheet"/>
+
+    <!-- bootstrap-icons css files -->
+    <link href="{% static "vendor/bootstrap-icons/bootstrap-icons.css" %}" rel="stylesheet"/>
+
+    <!-- boxicons css files -->
+    <link href="{% static "vendor/boxicons/css/boxicons.min.css" %}" rel="stylesheet"/>
+
+    <!-- glightbox css files -->
+    <link href="{% static "vendor/glightbox/css/glightbox.min.css" %}" rel="stylesheet"/>
+
+    <!-- remixicon css files -->
+    <link href="{% static "vendor/remixicon/remixicon.css" %}" rel="stylesheet"/>
+
+    <!-- swiper css files -->
+    <link href="{% static "vendor/swiper/swiper-bundle.min.css" %}" rel="stylesheet"/>
+
+
+  <!-- Template Main CSS File -->
+  <!-- <link href="{% static "css/style.css" %}" rel="stylesheet"/> -->
+
+  <link href="{% static "css/style.css" %}" rel="stylesheet"/>
+  <link href="{% static "css/mystyle.css" %}" rel="stylesheet"/>
+  
+  <link href="{% static "css/card-flip.css" %}" rel="stylesheet"/>
+  
+
+   
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center" style="color:#072C50;">
+
+      <h1 class="logo me-auto">
+        <a href="/"  style="color:#072C50;">
+          <span class="font-weight-bold" style="font-family: Rockwell Extra Bold;">Routers</span>
+          <span style="font-family: Comic Sans MS;font-size: 20px;"> Networking</span>
+        </a>
+      </h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <a href="index.html" class="logo me-auto">
+        <!-- <img src="assets/img/logo.png" alt="" class="img-fluid"> -->
+        <!-- <img src="{% static 'img/logo.png' %}" alt="My image"> -->
+      </a>
+      
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="/"  style="color:#072C50;">Home</a></li>
+          <li><a class="nav-link scrollto" href="http://127.0.0.1:8000/about/"  style="color:#072C50;">About</a></li>
+          <li class="dropdown"><a href="/ISPservice"  style="color:#072C50;"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li class="dropdown"><a href="/ISPservice"><span>ISP Services</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="/ISPservice/#vno">VNO (Virtual Network Operator)</a></li>
+                  <li><a href="/ISPservice/#unified">Unified Licence ISP</a></li>
+                  <li><a href="/ISPservice/#vno_vs_unified">Unified Licence ISP Vs VNO </a></li>
+                  <!-- <li><a href="#">IP Pool/AS Number</a></li> -->
+                </ul>
+              </li>
+              <li><a href="/ISPservice/#agr">AGR Compliance </a></li>
+              <li><a href="/ISPservice/#agr">Other legal Compliance </a></li>
+              <li class="dropdown"><a href="/ISPservice/#other"><span>Other License</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="/ISPservice/#ip1">IP1 </a></li>
+                  <li><a href="/ISPservice/#pmw">PM Wani</a></li>
+                  <li><a href="/ISPservice/#uas">Unified access service</a></li>
+                  <li><a href="/ISPservice/#nld">NLD</a></li>
+                  <li><a href="/ISPservice/#iso">ISO certification 27001</a></li>
+                </ul>
+              </li>
+            </ul>
+        </li>
+        <li class="dropdown"><a href="/telco"><span>Telco Resource for ISP</span> <i class="bi bi-chevron-down"></i></a>
+          <ul>
+              <li><a href="/telco/#ill">Internet lease-line </a></li>
+              <li><a href="/telco/#ptp">Point to Point</a></li>
+              <li><a href="/telco/#ggp">Google Peering</a></li>
+              <li><a href="/telco/#ipn">IP Pool/AS Number</a></li>
+          </ul>
+      </li>
+      <li class="dropdown"><a href="/technical"><span>Technical Consultancy</span> <i class="bi bi-chevron-down"></i></a>
+        <ul>
+            <li><a href="/technical/#isp">New ISP networking setup</a></li>
+            <li><a href="/technical/#nts">Network Trouble shooting</a></li>
+            <li><a href="/technical/#nms">ISP Network Management Software </a></li>
+            <li><a href="/technical/#amc">Network AMC</a></li>
+            <li><a href="/technical/#hdc">Hardware Consultancy</a></li>
+            <li><a href="/technical/#hdc">Refurbished ISP Hardware </a></li>
+            <li><a href="/technical/#ott">Wi-Fi Hotspot Solution </a></li>
+            <li><a href="/technical/#ott">O.T.T. </a></li>
+        </ul>
+    </li>
+    <li class="dropdown"><a href="/news"><span>News </span> <i class="bi bi-chevron-down"></i></a>
+      <ul>
+          <li><a href="/news/#notice">DOT</a></li>
+          <li><a href="/news/#notice">Market Trend </a></li>
+          <li><a href="/news/#lsthwd">Latest Hardware </a></li>
+          <!-- <li><a href="#">NLD</a></li>
+          <li><a href="#">ISO certification 27001</a></li> -->
+      </ul>
+  </li>
+          
+          <li><a class="nav-link scrollto" href="/contact">Contact Us</a></li>
+          <!-- <li><a class="getstarted scrollto" href="#about">Login</a></li> -->
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+          <h1>Better Solutions For Setup Your ISP Business</h1>
+          <!-- <h2>We are tenam of talented designers making websites with Bootstrap</h2> -->
+          <div class="d-flex justify-content-center justify-content-lg-start">
+            <a href="#about" class="btn-get-started scrollto">Get Started</a>
+            <a href="https://www.youtube.com/watch?v=RNwSiOGz1AM" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
+          </div>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+          <!-- <img src="assets/img/hero-img.png" class="img-fluid animated" alt=""> -->
+          <img src="{% static 'img/hero-img.png' %}" class="img-fluid animated" alt="My image">
+        </div>
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Clients Section ======= -->
+    <section id="clients" class="clients section-bg">
+      <div class="container">
+        <div class="row" data-aos="zoom-in">
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="{% static 'img/clients/client1.png' %}" alt="My image">
+          </div>
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="{% static 'img/clients/client2.png' %}" alt="My image">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="{% static 'img/clients/client3.png' %}" alt="My image">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="{% static 'img/clients/client4.png' %}" alt="My image">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="{% static 'img/clients/client5.png' %}" alt="My image">
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+            <img src="{% static 'img/clients/client 6.png' %}" alt="My image">
+          </div>
+
+          
+          
+        </div>
+      </div>
+    </section>
+    <!-- End Cliens Section -->
+    
+    
+
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>About ROUTERS NETWORKING
+          </h2>
+        </div>
+
+        <div class="row content">
+          <div class="col-lg-6">
+            <ul style="font-size: 18px;">
+              <!-- Routers Networking Private Limited based on Noida Sec-2 with our registered office at Mirzapur (UttarPradesh).  -->
+              <!-- <i class="ri-checkbox-blank-circle-fill"></i> -->
+              
+              <li style="font-size: 18px;">
+                <i class="ri-arrow-right-line"></i>
+                Routers Networking Private Limited is an entity engaged mainly in offering Licensing services for ISP, VNO, OSP, MSO,
+                ISO 27001 Certification. 
+              </li>
+              <li style="font-size: 18px;">
+                <i class="ri-arrow-right-line"></i>
+                We are the leading company pan india continue in our segment, can also provide
+                services related AGR filling, Technical trouble shooting for ISP business, IP Pool-
+                ASN number consultancy. Since, ISPs are our focused customer(running or new);
+                we have licensed over 700 plus ISPs and more than 1000 ISPs always in touch with
+                us to avail the services provided by the company with our efficient staff.
+              </li>
+              <li style="font-size: 18px;">
+                <i class="ri-arrow-right-line"></i>
+                We are the business associates of Tata Tele Services Limited as well Vodafone 
+                and gold partner in TTSL to provide bandwidths and ISP infrastructure services
+                and related products to our clients(existed or new).
+              </li>
+            </ul>
+            <!-- <a href="#" class="btn-learn-more">Learn More</a>             -->
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <p>
+              It is the main goal of Routers Networking Pvt Ltd to provide quality consultancy services to its clients in order to guide 
+              them properly as to matters regarding licensing services, infra provider and management consulting company.
+            </p>
+            <ul>
+              <li style="font-size: 18px;"><i class="ri-check-double-line" style="color: #F69545;"></i>  WiFi Hotspot Solutions</li>
+              <li style="font-size: 18px;"><i class="ri-check-double-line" style="color: #F69545;"></i> ISP License Application</li>
+              <li style="font-size: 18px;"><i class="ri-check-double-line" style="color: #F69545;"></i> Provide bandwidth for resale</li>
+              <!-- <li style="font-size: 17px;"><i class="ri-check-double-line" style="color: #F69545;"></i>  WiFi Hotspot Solutions</li>
+              <li style="font-size: 17px;"><i class="ri-check-double-line" style="color: #F69545;"></i> ISP License Application</li>
+              <li style="font-size: 17px;"><i class="ri-check-double-line" style="color: #F69545;"></i> Buying bandwidth for resale</li> -->
+              <!-- <li><i class="ri-check-double-line"></i> Buying bandwidth for resale</li> -->
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- End About Us Section -->
+
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us section-bg">
+      <div class="container-fluid" data-aos="fade-up">
+
+        <div class="row">
+          <div class="section-title">
+            <h2>Expertise
+            </h2>
+          </div>
+          <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
+
+            <div class="content">
+              
+              <!-- <h3>Eum ipsam laborum deleniti <strong>velit pariatur architecto aut nihil</strong></h3> -->
+              <p>
+                <!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit -->
+              </p>
+            </div>
+
+            <div class="accordion-list">
+              <ul>
+                <li>
+                  <a data-bs-toggle="collapse" class="collapse" data-bs-target="#accordion-list-1" style="color: #072C50;">
+                    <!-- <span style="color: #072C50;">01</span>  -->
+                     Plan and Setup your ISP network <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-1" class="collapse show" data-bs-parent=".accordion-list">
+                    <p>
+                      We create a tailor-made wireless/wired network which perfectly suits your particular area of operations.<br>
+                      This will help you buy the right and the most cost effective hardware for your ISP network, so that you don’t end up over-spending to setup your ISP business.<br>
+                      We will also setup your complete ISP network and configure your hardware exactly how you need it.  
+                    </p>
+                  </div>
+                </li>
+
+                <li>
+                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-2" class="collapsed" style="color: #072C50;">
+                    <!-- <span style="color: #072C50;">02</span> -->
+                     Technical Training <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-2" class="collapse" data-bs-parent=".accordion-list">
+                    <p>
+                      We get you trained from an existing Internet Service Provider to provide you the technical expertise you need to manage your day-to-day operations, handle support queries, tackle common problems and scale up your ISP business. Thus, we make sure you become self-reliant when it comes to taking future business decisions  
+                    </p>
+                  </div>
+                </li>
+
+                <li>
+                  <a data-bs-toggle="collapse" data-bs-target="#accordion-list-3" class="collapsed" style="color: #072C50;">
+                    <!-- <span style="color: #072C50;">03</span> -->
+                    Finding reliable bandwidth providers <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-3" class="collapse" data-bs-parent=".accordion-list">
+                    <p>
+                      We provide legal expertise to help you get your own ISP license or guide you towards getting an ISP franchise from a reliable licensed ISP. We’ve been in touch with about 1000 Internet Service Providers across India to understand which licensed providers are providing good quality and cost effective bandwidth. Thus, we help you tie up with the right licensed ISP for your particular state/city.  
+                    </p>
+                  </div>
+                </li>
+
+              </ul>
+            </div>
+
+          </div>
+
+          <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image:  url("{% static 'img/why-us1.png' %}");' data-aos="zoom-in" data-aos-delay="150">&nbsp;</div>
+        </div>
+                                                                      
+      </div>
+    </section><!-- End Why Us Section -->
+
+
+    <!-- ======= Cta Section ======= -->
+    <section id="hdc" class="cta p-5" style="background-color:rgba(74, 39, 79, 1);">
+      <div class="container" data-aos="zoom-in">
+    
+        <div class="row">
+          <!-- <h2 class="text-center text-light pb-3">We Happy To Guide You</h2> -->
+          <div class="col-lg-9 text-center text-lg-start" >
+            <h3 style="color: #F69545;">Hardware Consultancy and Refurbished ISP Hardware</h3><br>
+            <p style="color: #F69545;"> 
+              We offered services to our new ISPs for established a suitable hardware according to business need and size. 
+              <br> 
+              We offered the large range of used and refurbished servers, routers and other networking product in very attractive price.
+            </p>
+          </div>
+          <div class="col-lg-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="/contact/">Make Call for Query</a>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Cta Section -->
+
+
+    <!-- ======= Testimonial Section ======= -->
+    <section class="testimonial">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+            <div class="sec-heading text-center">
+              <h6>" Client's Says "</h6>
+              <!-- {{testimonial_obj}} -->
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="clients-carousel owl-carousel">
+            {% for obj in testimonial_obj %}
+              <div class="single-box"  style="border: 1px solid red; background-color:  #faefeb;">
+                <div class="img-area"><img alt="" height="" width="" class="img-fluid" src={{path}}{{obj.photo}}></div>
+                <div class="content">
+                  <p>{{obj.review_text}} {{path}} {{obj.photo}} </p>
+                  <h5 style="font-size: 25px;">{{obj.signature}}</h5>
+                  <h6> {{obj.designation}} </h6>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Testimonial Section -->
+
+    <!-- ======= Team Section ======= -->
+    <!-- <section id="team" class="team section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Team</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6">
+            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
+              <div class="pic">
+                <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
+                <img src="{% static 'img/team/team-1.jpg' %}" class="img-fluid" alt="My image">
+              </div>
+              <div class="member-info">
+                <h4>Walter White</h4>
+                <span>Chief Executive Officer</span>
+                <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
+                <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4 mt-lg-0">
+            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="200">
+              <div class="pic"><img src="{% static 'img/team/team-2.jpg' %}" class="img-fluid" alt="My image"></div>
+              <div class="member-info">
+                <h4>Sarah Jhonson</h4>
+                <span>Product Manager</span>
+                <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
+                <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4">
+            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="300">
+              <div class="pic"><img src="{% static 'img/team/team-3.jpg' %}" class="img-fluid" alt="My image"></div>
+              <div class="member-info">
+                <h4>William Anderson</h4>
+                <span>CTO</span>
+                <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
+                <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4">
+            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
+              <div class="pic"><img src="{% static 'img/team/team-1.jpg' %}" class="img-fluid" alt="My image"></div>
+              <div class="member-info">
+                <h4>Amanda Jepson</h4>
+                <span>Accountant</span>
+                <p>Dolorum tempora officiis odit laborum officiis et et accusamus</p>
+                <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section> -->
+    <!-- End Team Section -->
+
+    <!-- ======= Pricing Section ======= -->
+    <section id="pricing" class="pricing" style="background: #faefeb;">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Department of Telecommunication fee</h2>
+          <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> -->
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4 mt-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="box">
+              <h1 class="text-center">UL ISP Class A</h1>
+              <!-- <h4><sup>$</sup>0<span>per month</span></h4> -->
+              <hr>
+              <ul style="font-size: 17px; color:black; font-weight: ;">
+                <li><i class="bx bx-chevron-right"></i>
+                  This is for PAN india operations
+                </li>
+                <li><i class="bx bx-chevron-right"></i> 
+                  Rs. 50,000 Application Processing Fee(Non Refundable)
+                </li>
+                <li><i class="bx bx-chevron-right"></i> 
+                    Rs. 30 Lakhs (Non Refundable) Entry fee
+                </li>
+                <li class=""><i class="bx bx-chevron-right"></i> 
+                  Rs. 40 Lakhs Performance Bank Guarantee 
+                </li>
+                <li class=""><i class="bx bx-chevron-right"></i>
+                  Rs. 2 Lakhs Financial Bank Guarantee
+                </li>
+              </ul>
+              <!-- <a href="#" class="buy-btn">Get Started</a> -->
+            </div>
+          </div>
+
+
+          <div class="col-lg-4  mt-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="box">
+              <h1 class="text-center">UL ISP Class B</h1>
+              <!-- <h4><sup>$</sup>0<span>per month</span></h4> -->
+              <hr>
+              <ul style="font-size: 17px; color:black; font-weight: ;">
+                <li><i class="bx bx-chevron-right"></i>
+                  This is for State level operations
+                </li>
+                <li><i class="bx bx-chevron-right"></i> 
+                  Rs. 15 Thousands Application Processing fee(Non Refundable)
+                </li>
+                <li><i class="bx bx-chevron-right"></i> 
+                    Rs. 2 Lakhs (Non Refundable) Entry fee
+                </li>
+                <li class=""><i class="bx bx-chevron-right"></i> 
+                  Rs. 2 Lakhs Performance Bank Guarantee 
+                </li>
+                <li class=""><i class="bx bx-chevron-right"></i>
+                  Rs. 20 Thousands Financial Bank Guarantee
+                </li>
+              </ul>
+              <!-- <a href="#" class="buy-btn">Get Started</a> -->
+            </div>
+          </div>
+
+
+          <div class="col-lg-4 mt-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="box">
+              <h1 class="text-center">UL ISP Class C</h1>
+              <!-- <h4><sup>$</sup>0<span>per month</span></h4> -->
+              <hr>
+              <ul style="font-size: 17px; color:black; font-weight: ;">
+                <li><i class="bx bx-chevron-right"></i>
+                  This is for SSA level operations
+                </li>
+                <li><i class="bx bx-chevron-right"></i> 
+                  Rs. 10 Thousands Application Processing fee(Non Refundable)
+                </li>
+                <li><i class="bx bx-chevron-right"></i> 
+                    Rs. 20 Thousand (Non Refundable) Entry fee
+                </li>
+                <li class=""><i class="bx bx-chevron-right"></i> 
+                  Rs. 10 Thousands Performance Bank Guarantee 
+                </li>
+                <li class=""><i class="bx bx-chevron-right"></i>
+                  Rs. 2 Thousand financial Bank Guarantee 
+                </li>
+              </ul>
+              <!-- <a href="#" class="buy-btn">Get Started</a> -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- End Pricing Section -->
+
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <!-- <section id="faq" class="faq section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Frequently Asked Questions</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="faq-list">
+          <ul>
+            <li data-aos="fade-up" data-aos-delay="100">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">Do I need a Unified (ISP/VNO)license? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
+                <p>
+                  If you have no experience in the ISP business & limited capital to invest, we recommend you to opt for an existing ISP’s franchise.
+                  <br><br>
+                  If you have some experience in the ISP business, you can consider opting for an ISP license.
+                  <br><br>
+                  Having an ISP license makes it easier to buy bandwidth at cheaper rates. However, this only makes sense if you have an existing subscriber base.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="200">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">How long is the Unfied (ISP/VNO) License valid till?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Your ISP license agreement is valid for a period of 20 years  
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="300">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed"> Which service area authorization should I opt for? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  The Government of India has come up with one license for all telecom related services, known as a Unified License. Under unified license, the license holder can apply for authorization of different services & service areas. To become an ISP, one must acquire a Unified License under which he will obtain Authorization for providing ISP services. Hence, it must be understood that one has to apply for an ISP Authorization for a service area under the Unified License.
+                  <br><br>
+                  One company can hold only one Unified License, but can apply for service area authorization of multiple services and/or service areas. 
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="400">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">How much time does this application take? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  The complete process from filing your application to getting the Unified (ISP) license takes about 3-5 months.
+                  <br><br>
+                  Once you file your application, the DoT will issue you a ‘Letter of intent’ within 2 months. After this, it takes about 1-3 months to furnish all bank guarantees and additional information required by the DoT.  
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="500">
+              <i class="bx bx-help-circle icon-help"></i> <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">What is the annual/quarterly compliance and costs? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
+                <p>
+                  Once you’re a licensed ISP, the DoT asks you to submit:
+                    <br><br>
+                    1. &nbsp;&nbsp;&nbsp;Subscriber list with state-wise data of the number of customers. <br><br>
+                    2. &nbsp;&nbsp;&nbsp;Session logs of your customers.  <br><br>
+                    3. &nbsp;&nbsp;&nbsp;8 % Annual license fee to be charged on your Adjusted Gross Revenue (A.G.R.)<br> Adjusted Gross Revenue = Total Revenue – Bandwidth Cost paid to Telecom Provider. <br><br>
+                    For instance, if your total revenue from your customers is INR 100 and your cost of bandwidth INR 50, the DoT is asking you to pay 8% on the remaining INR 50 to them as annual license fees. In layman terms, this is known as AGR.
+                  
+                </p>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+    </section> -->
+    <!-- End Frequently Asked Questions Section -->
+
+    
+
+  
+    
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+  
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <h4>Join Our Newsletter</h4>
+            <!-- <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p> -->
+            <form action="" id="subscribeform" method="post">
+              {% csrf_token %}
+              <input type="email" name="useremail" id="useremail" placeholder="Enter your email ID" required><input type="submit" value="Subscribe">
+            </form>
+            <div class="font-weight-bold mt-3" id="subscribe_api_response"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Routers Networking</h3>
+            <p>
+              B-7, 1st Floor <br>
+              Sector-2, Noida, <br>
+              (U.P.)- 201301, India <br><br>
+              <strong>Phone:</strong> +91 8112362001<br>
+              <strong>Email:</strong> info@routersnetworking.in <br>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="/">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/about">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/ISPservice">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/telco">Telco Resources for ISP</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/technical">Technical Consultancy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="/technical/#isp">New ISP networking</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/ISPservice/#vno">Virtual Network Operator</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/ISPservice/#unified">Unified Licence ISP</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/ISPservice/#agr">AGR Compliance</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/ISPservice/#iso">ISO certification</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Social Networks</h4>
+            <p>Connect Routers Networking on social media also:</p>
+            <div class="social-links mt-3">
+              <a href="" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="https://api.WhatsApp.com/send?phone=8112362008" class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
+              <a href="" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom clearfix">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Routers Networking</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by <a href="https://bootstrapmade.com/" class="text-white font-weight-bold">Fimseb Technology</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-chat-left-text-fill"></i></a>
+
+ 
+  
+  
+
+    <!-- vendor JS files -->
+
+        <!-- aos JS files -->
+        <!-- <link href ="{% static "vendor/swiper/swiper-bundle.min.css" %}" rel="stylesheet"/> -->
+        <script src="{% static 'vendor/aos/aos.js' %}"></script>
+
+        <!-- bootstrap JS files -->
+        <!-- <script src="{% static 'vendor/bootstrap/bootstrap.bundle.js' %}"></script> -->
+        <!-- <script src="{% static 'vendor/bootstrap/bootstrap.bundle.min.js' %}"></script> -->
+
+        <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+        
+        <!-- <script src="{% static 'vendor/bootstrap/bootstrap.esm.js' %}"></script>
+        <script src="{% static 'vendor/bootstrap/bootstrap.esm.min.js' %}"></script>
+        <script src="{% static 'vendor/bootstrap/bootstrap.js' %}"></script> -->
+        <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+
+        <!-- glightbox JS files -->
+        <!-- <script src="{% static 'vendor/glightbox/js/glightbox.js' %}"></script> -->
+        <script src="{% static 'vendor/glightbox/js/glightbox.min.js' %}"></script>
+
+        <!-- isotope-layout JS files -->
+        <!-- <script src="{% static 'vendor/isotope-layout/js/isotope.pkgd.js' %}"></script> -->
+        <script src="{% static 'vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+
+        <!-- php-email-form JS files -->
+        <script src="{% static 'vendor/php-email-form/validate.js' %}"></script>
+
+        <!-- swiper JS files -->
+        <script src="{% static 'vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+        <!-- waypoints JS files -->
+        <script src="{% static 'vendor/waypoints/noframework.waypoints.js' %}"></script>
+
+        <script src="{% static 'js/main.js' %}"></script>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+  </script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js">
+  </script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js">
+  </script>
+  <script>
+    $('.clients-carousel').owlCarousel({
+        loop: true,
+        nav: false,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        animateOut: 'fadeOut',
+        animateIn: 'fadeIn',
+        smartSpeed: 450,
+        margin: 30,
+        responsive: {
+            0: {
+                items: 1
+            },
+            768: {
+                items: 2
+            },
+            991: {
+                items: 2
+            },
+            1200: {
+                items: 2
+            },
+            1920: {
+                items: 2
+            }
+        }
+    });
+
+    $("#subscribeform").submit(function(e){
+    form = document.getElementById('subscribeform')
+    e.preventDefault();
+    var email_field_value = document.getElementById("useremail").value;
+    
+    console.log("email : ", email_field_value);
+    $.ajax({
+        type : 'POST',
+        url : "http://127.0.0.1:8000/subscribe/",
+        data : {
+              
+                "useremail" : email_field_value,
+              },
+
+        
+        success: function (response){
+          console.log("-------------------------working-------------------> api send data :"+response["valid"])
+            if(response["valid"]){
+                document.getElementById('subscribe_api_response').innerHTML = 'Thanks For Subscribe us !!! ';
+                form.reset();
+                
+            }
+            else{
+                document.getElementById('subscribe_api_response').innerHTML = 'There is some error.<br> Try Again !!!';
+            }
+        }
+
+    })
+})
+    
+  </script>
+
+  </body>
+
+
+</html>

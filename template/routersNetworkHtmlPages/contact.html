@@ -1,0 +1,275 @@
+{% extends "routersNetworkHtmlPages/header.html" %} 
+
+
+{% load static %} 
+
+{% block title %}
+    Contact Us
+{% endblock %}
+
+
+{% block pagecontent %} 
+
+<!-- ======= Breadcrumbs ======= -->
+    
+<section id="breadcrumbs" class="breadcrumbs" style="background-color: white;">
+    <div class="container">
+
+        <ol>
+            <li><a href="/">Home</a></li>
+            <li>Contact Us</li>
+        </ol>
+
+    </div>
+  </section>
+<!-- End Breadcrumbs -->
+
+<!-- banner start -->
+<section id="cta" class="cta" style="background-color:rgb(20, 26, 70);">
+    <div class="container" data-aos="zoom-in">
+
+    <div class="row">
+        <div class="col-lg-12 text-center text-lg-start">
+        <h1 class="text-center"  style="color: #F69545;">Contact Routers Networking</h1>
+        </div>
+    </div>
+    </div>
+</section>
+
+<!-- banner ends -->
+
+
+
+
+  <!-- ======= Contact Section ======= -->
+<section id="contact" class="contact">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>Contact Us </h2>
+        <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> -->
+      </div>
+
+      <div class="row">
+
+        <div class="col-lg-5 d-flex align-items-stretch align-middle">
+          <div class="info align-middle">
+            <div class="address">
+              <i class="bi bi-geo-alt"></i>
+              <h4>Location:</h4>
+              
+              <p>B-7, 1st Floor Sector-2, Noida, (U.P.)- 201301</p>
+            </div>
+
+            <div class="email">
+              <i class="bi bi-envelope"></i>
+              <h4>Email:</h4>
+              <p>info@routersnetwork.in</p>
+            </div>
+
+            <div class="phone">
+              <i class="bi bi-phone"></i>
+              <h4>Call:</h4>
+              <p>+91 8112362001</p>
+            </div>
+
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 490px;" allowfullscreen></iframe>
+          </div>
+
+        </div>
+
+        <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+          <form  method="post" id="contactform" role="form" class="php-email-form">
+            {% csrf_token %}
+            
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" class="form-control" name="name" id="name" required>
+            </div>
+            <div class="form-group">
+              <label for="name">Company Name</label>
+              <input type="text" class="form-control" name="company" id="company" required>
+            </div>
+            <div class="row">
+              <div class="form-group col-md-6">
+                <label for="name">State</label>
+                <select class="form-select form-control" name="state" id="state" required>
+                  <option label="" id="placeholder" disabled selected hidden class="text-center">-- Select -- </option>
+                
+                    {% for state in state_obj %}
+                        <option value="{{state.state_id}}">{{state.state}} </option>
+                    {% endfor %}
+                </select>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="name">District</label>
+                <select class="form-select form-control" name="district" id="district" required>
+                  <option label="" id="placeholder"disabled selected hidden class="text-center">Please Select the district </option>
+                
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="form-group col-md-6">
+                <label for="name">Pincode</label>
+                <input type="text"  name="pincode" class="form-control" id="pincode" pattern="[0-9]{6}" required>
+              </div>
+              <div class="form-group col-md-6">
+                <label for="name">Your Contacts</label>
+                <input type="text"  name="contact" class="form-control" id="phone" pattern="[0-9]{10}" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="name">Address</label>
+              <textarea class="form-control" name="address" id="address" rows="1" required></textarea>
+            </div>
+            <div class="form-group">
+              <label for="name">License For</label>
+              <select class="form-control form-select" name="license" id="license">
+                <!-- <optgroup label="--- Select ---" class="text-center">  --- Select --- </optgroup> -->
+                <option label="" id="placeholder"disabled selected hidden class="text-center">-- Select -- </option>
+                <optgroup label="License" class="text-center"> License </optgroup>
+                <option value="saab">ISP License </option>
+                <option value="saab">AGR Compliance </option>
+
+                <optgroup label="Other legal Compliance" class="text-center"> Other legal Compliance </optgroup>
+                
+                <option value="fiat">IP1</option>
+                <option value="audi">PM-Wani</option>
+                <option value="volvo">Unified access service</option>
+                <option value="saab">NLD License</option>
+                <option value="fiat">ISO certification 27001</option>
+                <option value="audi">New ISP networking setup</option>
+                <option value="volvo">Network Trouble shooting</option>
+                <option value="saab">ISP Network Management Software </option>
+                <option value="Network AMC"> Network AMC</option>
+                <option value="fiat">Hardware Consultancy</option>
+                <option value="audi">Refurbished ISP Hardware</option>
+                <option value="volvo">Select License Query For:</option>
+                <option value="saab">Wi-Fi Hotspot Solution</option>
+                <option value="fiat">O.T.T.</option>
+                <option value="audi">Internet lease-line</option>
+                <option value="volvo">Point to Point</option>
+                <option value="saab">Google Peering</option>
+                <option value="fiat">IP Pool/AS Number</option>
+                <!-- <option value="audi">Audi</option> -->
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="name">Write Your Query Here:</label>
+              <textarea class="form-control" name="query" id="query" rows="2" placeholder="Optional"></textarea>
+            </div>
+            <!-- <div class="my-3">
+              <div class="loading">Loading</div>
+              <div class="error-message" id="api_response"></div>
+              <div class="sent-message" id="api_response">Your message has been sent. Thank you!</div>
+            </div> -->
+            <div class="text-center" >
+              <button type="submit" style="font-size: large;">
+                Send Message
+              </button>
+            </div>
+            <h2 class="text-center" id="api_response"></h2>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Contact Section -->
+
+
+  <script>
+    $("#state").change(function(e){
+        e.preventDefault();
+        var state = $(this).val();
+        // console.log("----------------------------------------->"+state);
+        $.ajax({
+            type : 'GET',
+            url : "http://127.0.0.1:8000/district/",
+            data : {'state':state}, 
+            success: function(response){
+              // console.log("district:",response.district_obj);
+
+              var a = document.querySelector("#district");
+              a.textContent = '';
+              var j = document.createElement("option");
+              for (let i in response.district_obj){
+                console.log(i,response.district_obj[i])
+                var j = document.createElement("option");
+                j.innerHTML= response.district_obj[i];
+                a.appendChild(j);
+              }
+
+            },
+            error: function (response){
+              console.log("---------------------------------error-------->"+response)
+            }
+          })
+    })
+
+    $("#contactform").submit(function(e){
+            form = document.getElementById('contactform')
+            e.preventDefault();
+            var name_field_value = document.getElementById("name").value;
+            var company_field_value = document.getElementById("company").value;
+            var state_field_value = document.getElementById("state").value;
+            var district_field_value = document.getElementById("district").value;
+            var pincode_field_value = document.getElementById("pincode").value;
+            var contact_field_value = document.getElementById("phone").value;
+            var address_field_value = document.getElementById("address").value;
+            var license_field_value = document.getElementById("license").value;
+            var query_field_value = document.getElementById("query").value;
+            
+            console.log("pincode : ", pincode_field_value);
+            console.log("contact : ", contact_field_value);
+            $.ajax({
+                type : 'POST',
+                url : "http://127.0.0.1:8000/contact_form/",
+                data : {
+                      
+                        "name" : name_field_value,
+                        "company" : company_field_value,
+                        "state" : state_field_value,
+                        "district" : district_field_value,
+                        "pincode" : pincode_field_value,
+                        "contact" : contact_field_value,
+                        "address" : address_field_value,
+                        "license" : license_field_value,
+                        "query" : query_field_value,
+                        // "CSRF": getCSRFTokenValue()
+                      },
+
+                // console.log("-------------------------data------------------->"+ data)
+                
+                success: function (response){
+                  console.log("-------------------------working-------------------> api send data :"+response["valid"])
+                    if(response["valid"]){
+                        document.getElementById('api_response').innerHTML = 'Your message has been sent. Thank you!';
+                        // $("#district").val("");
+                        
+                        form.reset();
+                        var a = document.querySelector("#district");
+                        a.textContent = '';
+                        var j = document.createElement("option");
+                                              
+                          j.innerHTML= '';
+                          a.appendChild(j);
+                        
+                    }
+                    else{
+                        document.getElementById('api_response').innerHTML = 'Please fill form Again!!!';
+                    }
+                }
+
+            })
+        })
+    
+</script>
+
+{% endblock %}
+
+{%  block outside_body %}
+
+
+{% endblock %}

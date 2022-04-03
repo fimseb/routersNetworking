@@ -1,0 +1,235 @@
+{% extends "routersNetworkHtmlPages/base.html" %}
+
+{% load static %}
+
+
+
+{% block content %}
+
+<!-- ======= Header ======= -->
+    <header id="header" class="fixed-top "  style="background: #F69545;">
+        <div class="container d-flex align-items-center">
+        
+          <!-- <h1 class="logo me-auto">
+            <a href="/"  style="color:#072C50;">
+              <span class="font-weight-bold" style="font-family: Rockwell Extra Bold;">Routers</span>
+              <span style="font-family: Comic Sans MS;font-size: 20px;"> Networking</span>
+            </a>
+          </h1> -->
+        
+        <h1 class="logo me-auto" class="display-inline">
+          <a href="/" class="display-inline" style="color:#072C50;">
+            <div class="display-inline">
+              <span class="font-weight-bold" style="font-family: Rockwell Extra Bold;">Routers</span>
+              <span style="font-family: Comic Sans MS;font-size: 20px;">Networking</span>
+            </div>
+        </h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <a href="index.html" class="logo me-auto">
+        </a>
+        
+        <nav id="navbar" class="navbar">
+            <ul>
+            <li><a class="nav-link scrollto" href="/"  style="color:#141A46; font-size: ;">Home</a></li>
+            <li><a class="nav-link scrollto" href="http://127.0.0.1:8000/about/" style="color:#141A46; font-size:">About</a></li>
+            <li class="dropdown"><a href="/ISPservice" style="color:#141A46; font-size:"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+                <ul>
+                <li class="dropdown"><a href="/ISPservice/#isp"><span>ISP Services</span> <i class="bi bi-chevron-right"></i></a>
+                    <ul>
+                    <li><a href="/ISPservice/#vno">VNO (Virtual Network Operator)</a></li>
+                    <li><a href="/ISPservice/#unified">Unified Licence ISP</a></li>
+                    <li><a href="/ISPservice/#vno_vs_unified">Unified Licence ISP Vs VNO </a></li>
+                    </ul>
+                </li>
+                <li><a href="/ISPservice/#agr">AGR Compliance </a></li>
+                <li><a href="/ISPservice/#agr">Other legal Compliance </a></li>
+                <li class="dropdown"><a href="/ISPservice/#other"><span>Other License</span> <i class="bi bi-chevron-right"></i></a>
+                    <ul>
+                    <li><a href="/ISPservice/#ip1">IP1 </a></li>
+                    <li><a href="/ISPservice/#pmw">PM Wani</a></li>
+                    <li><a href="/ISPservice/#uas">Unified access service</a></li>
+                    <li><a href="/ISPservice/#nld">NLD</a></li>
+                        
+                    <li><a href="/ISPservice/#iso">ISO certification 27001</a></li>
+                    </ul>
+                </li>
+                </ul>
+            </li>
+            <li class="dropdown"><a href="/telco"  style="color:#141A46; font-size:"><span>Telco Resource for ISP</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+                <li><a href="/telco/#ill">Internet lease-line </a></li>
+                <li><a href="/telco/#ptp">Point to Point</a></li>
+                <li><a href="/telco/#ggp">Google Peering</a></li>
+                <li><a href="/telco/#ipn">IP Pool/AS Number</a></li>
+            </ul>
+        </li>
+        <li class="dropdown"><a href="/technical"  style="color:#141A46; font-size:"><span>Technical Consultancy</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+                <li><a href="/technical/#isp">New ISP networking setup</a></li>
+                <li><a href="/technical/#nts">Network Trouble shooting</a></li>
+                <li><a href="/technical/#nms">ISP Network Management Software </a></li>
+                <li><a href="/technical/#amc">Network AMC</a></li>
+                <li><a href="/technical/#hdc">Hardware Consultancy</a></li>
+                <li><a href="/news/#lsthwd">Refurbished ISP Hardware </a></li>
+                <li><a href="/technical/#ott">Wi-Fi Hotspot Solution </a></li>
+                <li><a href="/technical/#ott">O.T.T. </a></li>
+            </ul>
+        </li>
+        <li class="dropdown"><a href="/news"  style="color:#141A46; font-size:"><span>News </span> <i class="bi bi-chevron-down"></i></a>
+        <ul>
+            <li><a href="/news/#notice">Market Trend </a></li>
+            <li><a href="/news/#dot">DOT</a></li>
+            <li><a href="/news/#lsthwd">Latest Hardware </a></li>
+            <!-- <li><a href="#">NLD</a></li>
+            <li><a href="#">ISO certification 27001</a></li> -->
+        </ul>
+    </li>
+            
+            <li><a class="nav-link scrollto" href="/contact" style="color:#141A46; font-size:">Contact Us</a></li>
+            <!-- <li><a class="getstarted scrollto" href="#about">Login</a></li> -->
+            </ul>
+            <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+
+        </div>
+    </header><!-- End Header -->
+
+    <main id="main">
+
+        {% block pagecontent %} 
+
+        {% endblock %}
+  
+    </main><!-- End #main -->
+  
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+  
+      <div class="footer-newsletter">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-6">
+              <h4>Join Our Newsletter</h4>
+              <!-- <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p> -->
+              <form action="" id="subscribeform" method="post">
+                <!-- {% csrf_token %} -->
+                <input type="email" name="useremail" id="useremail" placeholder="Enter your email ID" required>
+                <input type="submit" value="Subscribe">
+            </form>
+            <div class="font-weight-bold mt-3" id="subscribe_api_response"></div>
+          </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+  
+            <div class="col-lg-3 col-md-6 footer-contact">
+              <h3>Routers Networking</h3>
+              <p>
+                B-7, 1st Floor <br>
+                Sector-2, Noida, <br>
+                (U.P.)- 201301, India <br><br>
+                <strong>Phone:</strong> +91 8112362001<br>
+                <strong>Email:</strong> info@routersnetworking.in <br>
+              </p>
+            </div>
+  
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Useful Links</h4>
+              <ul>
+                <li><i class="bx bx-chevron-right"></i> <a href="/">Home</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="/about">About us</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="/ISPservice">Services</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="/telco">Telco Resources for ISP</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="/technical">Technical Consultancy</a></li>
+              </ul>
+            </div>
+  
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Our Services</h4>
+              <ul>
+                <li><i class="bx bx-chevron-right"></i> <a href="/technical/#isp">New ISP networking</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="/ISPservice/#vno">Virtual Network Operator</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="/ISPservice/#unified">Unified Licence ISP</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="/ISPservice/#agr">AGR Compliance</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="/ISPservice/#iso">ISO certification</a></li>
+              </ul>
+            </div>
+  
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Our Social Networks</h4>
+              <p>Connect Routers Networking on social media also: </p>
+              <div class="social-links mt-3">
+                <a href="" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="https://api.WhatsApp.com/send?phone=8112362008" class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
+                <a href="" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+  
+      <div class="container footer-bottom clearfix">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Routers Networking</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/ -->
+          Designed by <a href="https://bootstrapmade.com/" class="text-white font-weight-bold">Fimseb Technology</a>
+        </div>
+      </div>
+    </footer><!-- End Footer -->
+  
+    <div id="preloader"></div>
+    <a href="/contact" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-chat-left-text-fill" style=""></i></a><br>
+    <!-- <a href="" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a> -->
+  
+    <script>
+      $("#subscribeform").submit(function(e){
+        form = document.getElementById('subscribeform')
+        e.preventDefault();
+        var email_field_value = document.getElementById("useremail").value;
+        
+        console.log("email : ", email_field_value);
+        $.ajax({
+            type : 'POST',
+            url : "http://127.0.0.1:8000/subscribe/",
+            data : {
+                  
+                    "useremail" : email_field_value,
+                  },
+  
+            
+            success: function (response){
+              console.log("-------------------------working-------------------> api send data :"+response["valid"])
+                if(response["valid"]){
+                    document.getElementById('subscribe_api_response').innerHTML = 'Thanks For Subscribe us !!! ';
+                    form.reset();
+                    
+                }
+                else{
+                    document.getElementById('subscribe_api_response').innerHTML = 'There is some error.<br> Try Again !!!';
+                }
+            }
+  
+        })
+      })
+  
+  </script>
+  
+{% endblock %}
+
+{% block outside_body %} 
+
+
+
+{% endblock %}
