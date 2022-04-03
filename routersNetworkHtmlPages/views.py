@@ -1,8 +1,8 @@
 from datetime import date
 from django.http import JsonResponse
 from django.shortcuts import render
-from routersNetworkHtmlPages.models import State, District, Testimonial, News
-from .models import Query
+from routersNetworkHtmlPages.models import State, District, Testimonial, News, DOT
+from .models import DOT, Query, Subscribe
 from django.views.decorators.csrf import csrf_exempt
 import json
 
@@ -15,9 +15,17 @@ def home(request):
 def about(request):
     return render(request, 'routersNetworkHtmlPages/about.html')
 
-
-def test(request):
-    return render(request,'AdminLTE-3.2.0\index.html')
+@csrf_exempt
+def subscribe(request):
+    if request.POST.get('useremail', None) != None:
+        email = request.POST['useremail']
+        try:
+            obj = Subscribe.objects.get(user_email=email)
+        except:
+            obj = Subscribe(user_email=email)
+            obj.save()
+    print('--------------> call come here')
+    return JsonResponse({'valid':'True'})
 
 def ISP(request):
     return render(request, 'routersNetworkHtmlPages/ISPservice.html')
@@ -33,9 +41,12 @@ def technical(request):
 
 def news(request):
     news = News.objects.all().order_by('-date','-time')
+    dots = DOT.objects.all().order_by('-date','-time')
     for i in news:
         print(i)
-    return render(request, 'routersNetworkHtmlPages/news.html', context={'news': news, 'path' : 'media/'})
+    for i in dots:
+        print(i)
+    return render(request, 'routersNetworkHtmlPages/news.html', context={'news': news, 'dots': dots, 'path' : 'media/'})
 
 
 def contact(request):

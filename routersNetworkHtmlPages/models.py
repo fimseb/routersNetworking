@@ -67,3 +67,23 @@ class News(models.Model):
     def __str__(self) -> str:
         return self.news_title
 
+
+class DOT(models.Model):
+    news_id = models.AutoField(primary_key=True)
+    # user = models.ForeignKey(User, on_delete=models.CASCADE)
+    news_title = models.CharField(max_length=64)
+    news_discription = models.TextField()
+    pdf = models.FileField(upload_to='news')
+    date = models.DateField(auto_now_add=True, null=True)
+    time = models.TimeField(auto_now_add=True, null=True)
+
+    def __str__(self) -> str:
+        return self.news_title
+
+
+class Subscribe(models.Model):
+    user_email = models.EmailField(unique=True)
+
+    def __str__(self) -> str:
+        return self.user_email
+

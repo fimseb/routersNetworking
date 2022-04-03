@@ -14,7 +14,7 @@ urlpatterns = [
     path('district/', views.district),
     path('contact_form/', views.contact_form_data),
 
-    path('test/', views.test),
+    path('subscribe/', views.subscribe),
    
 #    [z-zA-Z0-9*]
 
