@@ -73,7 +73,7 @@ class DOT(models.Model):
     # user = models.ForeignKey(User, on_delete=models.CASCADE)
     news_title = models.CharField(max_length=64)
     news_discription = models.TextField()
-    pdf = models.FileField(upload_to='news')
+    pdf = models.FileField(upload_to='dots')
     date = models.DateField(auto_now_add=True, null=True)
     time = models.TimeField(auto_now_add=True, null=True)
 
