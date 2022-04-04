@@ -368,7 +368,7 @@
               <div class="single-box"  style="border: 1px solid red; background-color:  #faefeb;">
                 <div class="img-area"><img alt="" height="" width="" class="img-fluid" src={{path}}{{obj.photo}}></div>
                 <div class="content">
-                  <p>{{obj.review_text}} {{path}} {{obj.photo}} </p>
+                  <p>{{obj.review_text}}  </p>
                   <h5 style="font-size: 25px;">{{obj.signature}}</h5>
                   <h6> {{obj.designation}} </h6>
                 </div>
@@ -816,7 +816,7 @@
     console.log("email : ", email_field_value);
     $.ajax({
         type : 'POST',
-        url : "http://127.0.0.1:8000/subscribe/",
+        url : "http://routersnetworking.in/subscribe/",
         data : {
               
                 "useremail" : email_field_value,
