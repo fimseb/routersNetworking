@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-@xcb=)ct#=3$htjgt_&$wp23!q9$y8$rrqt5r!w_h7=#-5^k#z
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [ "routersnetworking.in", "www.routersnetworking.in"]
+# ALLOWED_HOSTS = [ "routersnetworking.in", "www.routersnetworking.in"]
 
 
 # Application definition
@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'contact',
     'plans_pincode',
     'accounts',
-    'corsheaders',
+    # 'corsheaders',
     # 'routers_networking_internal',
     # 'rest_framework',
 ]
@@ -54,7 +54,7 @@ MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
 
-    'corsheaders.middleware.CorsMiddleware',
+    # 'corsheaders.middleware.CorsMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
