@@ -78,6 +78,8 @@ def contact_form_data(request):
     address = request.POST['address']
     license = request.POST['license']
     query = request.POST['query']
+    state_obj = State.objects.get(state_id=state)
+    print('---------------> state obj', state_obj)
     # print('------------------------------->api result:', name, company, state, district, pincode, contact, address, license, query)
     try:
         # raise NameError('HiThere')
@@ -85,7 +87,7 @@ def contact_form_data(request):
             q = Query(
                 name = name,
                 company_name = company,
-                state = state,
+                state = state_obj,
                 district = district,
                 pincode = pincode,
                 contact = contact,

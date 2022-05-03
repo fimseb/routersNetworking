@@ -3,6 +3,7 @@
 # from inspect import signature
 # from statistics import mode
 # from unicodedata import name
+from statistics import mode
 from django.db import models
 # from datetime import date, time
 from django.contrib.auth.models import User
@@ -87,3 +88,15 @@ class Subscribe(models.Model):
     def __str__(self) -> str:
         return self.user_email
 
+
+
+class Hardware(models.Model):
+    hardware_id = models.AutoField(primary_key=True)
+    name = models.CharField(max_length=128)
+    discription = models.TextField()
+    date = models.DateField(auto_now_add=True)
+    is_photo = models.BooleanField()
+    visible = models.BooleanField(default=True)
+
+# class hardware_photo(models.Model):
+#     hardware_photo_id = 

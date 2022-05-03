@@ -14,6 +14,8 @@ from pathlib import Path
 
 import os
 
+from pytz import HOUR
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -47,6 +49,8 @@ INSTALLED_APPS = [
     # 'corsheaders',
     # 'routers_networking_internal',
     # 'rest_framework',
+    'routersNetworking_backend',
+    'rest_framework_simplejwt',
 ]
 
 MIDDLEWARE = [
@@ -55,7 +59,7 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
 
     # 'corsheaders.middleware.CorsMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    # 'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -65,6 +69,20 @@ CORS_ORIGIN_WHITELIST=[
         'http://www.routersnetworking.in',
         'http://routersnetworking.in',
         ]
+
+from datetime import timedelta
+
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(days=1),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=365),
+    
+}
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
+}
 
 ROOT_URLCONF = 'routersNetwork.urls'
 print('tepmlate path', os.path.join(BASE_DIR, 'template'))
