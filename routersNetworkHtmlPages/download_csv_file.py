@@ -1,12 +1,12 @@
 import csv
 from routersNetworkHtmlPages.models import Query
 import pandas as pd
-from routersNetworkHtmlPages.serializers import QuerySerializer
+# from routersNetworkHtmlPages.serializers import QuerySerializer
 import uuid
 from django.http import HttpResponse
 from django.shortcuts import redirect
 
-from routersNetworkHtmlPages.serializers import QuerySerializer
+# from routersNetworkHtmlPages.serializers import QuerySerializer
 
 class GenerateExcel:
     short_description = "Download in Excel Sheet"
