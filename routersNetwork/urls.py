@@ -17,11 +17,14 @@ from django.contrib import admin
 from django.urls import path, include
 from routersNetworkHtmlPages import views
 # from routersNetworkHtmlPages import
+from routersNetworkHtmlPages.download_csv_file import GenerateExcel
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home),
     path('', include('routersNetworkHtmlPages.urls')),
     path('accounts/', include('accounts.urls')),
+    path('api/', include('routersNetworking_backend.urls')),
     # path('api-auth/', include('rest_framework.urls'))
+    path('export/', GenerateExcel, name="export-excel")
 ]
