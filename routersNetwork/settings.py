@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-@xcb=)ct#=3$htjgt_&$wp23!q9$y8$rrqt5r!w_h7=#-5^k#z
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-# ALLOWED_HOSTS = [ "routersnetworking.in", "www.routersnetworking.in"]
+ALLOWED_HOSTS = [ "routersnetworking.in", "www.routersnetworking.in"]
 
 
 # Application definition
