@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'contact',
     'plans_pincode',
     'accounts',
-    # 'corsheaders',
+    'corsheaders',
     # 'routers_networking_internal',
     # 'rest_framework',
     'routersNetworking_backend',
@@ -54,21 +54,23 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
 
-    # 'corsheaders.middleware.CorsMiddleware',
+    #'corsheaders.middleware.CorsMiddleware',
     # 'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+CORS_ORIGIN_ALLOW_ALL=True
 
-CORS_ORIGIN_WHITELIST=[
-        'http://www.routersnetworking.in',
-        'http://routersnetworking.in',
-        ]
+#CORS_ORIGIN_WHITELIST=[
+ #       'http://www.routersnetworking.in',
+  #      'http://routersnetworking.in',
+#        ]
 
 from datetime import timedelta
 
