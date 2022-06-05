@@ -1,0 +1,103 @@
+{% extends "routersNetworkHtmlPages/header.html" %}
+
+
+{% load static %}
+
+{% block title %}
+    About Us
+{% endblock %}
+
+{% block pagecontent %}
+<!-- ======= Breadcrumbs ======= -->
+    
+    <section id="breadcrumbs" class="breadcrumbs" style="background-color: white;">
+        <div class="container">
+  
+            <ol>
+                <li><a href="/">Home</a></li>
+                <li>About Us</li>
+            </ol>
+  
+        </div>
+      </section>
+    <!-- End Breadcrumbs -->
+
+    <!-- banner start -->
+    <section id="cta" class="cta" style="background:rgb(20, 26, 70);">
+        <div class="container" data-aos="zoom-in">
+
+        <div class="row">
+            <div class="col-lg-12 text-center text-lg-start">
+            <h1 class="text-center" style="color: #F69545;">About Routers Networking</h1>
+            <!-- <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> -->
+            </div>
+            <!-- <div class="col-lg-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="#">Call To Action</a>
+            </div> -->
+        </div>
+        </div>
+    </section>
+    
+    <!-- banner ends -->
+
+    <!-- ======= Skills Section ======= -->
+    
+    <section id="portfolio-details" class="portfolio-details">
+        <div class="container">
+  
+          <div class="row gy-4">
+  
+            <div class="col-lg-6">
+              <div class="portfolio-details-slider swiper">
+                <div class="swiper-wrapper align-items-center">
+  
+                  <div class="">
+                    <!-- <img src="/{{path}}{{ obj.photo }}" alt=""> -->
+                    <img src="/{{path}}{{ obj.photo }}" alt="">
+                  </div>
+  
+                  <!-- <div class="swiper-slide">
+                    <img src="assets/img/portfolio/portfolio-2.jpg" alt="">
+                  </div>
+  
+                  <div class="swiper-slide">
+                    <img src="assets/img/portfolio/portfolio-3.jpg" alt="">
+                  </div> -->
+  
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+  
+            <div class="col-lg-6">
+              <div class="portfolio-info">
+                <h3>Product information</h3>
+                <ul>
+                  <li><strong>Category</strong>: {{obj.category|title}}</li>
+                  <li><strong>Client</strong>:  {{obj.name|title}}</li>
+                  <li><strong>Available Date</strong>: {{obj.created_date}}</li>
+                  <li><strong>Hardware Client</strong>: {{obj.hardware_client|title}}</li>
+                  {% if obj.url %}
+                  <li><strong class="d-inline">Hardware Purchase Link</strong>: <a href="{{obj.url}}" class="nav-link d-inline">Click Here</a></li>
+                  {% endif %}
+                </ul>
+              </div>
+              <div class="portfolio-description">
+                <h2>{{obj.discription_title}}</h2>
+                <p>
+                  {{obj.discription|linebreaks}}
+                </p>
+              </div>
+            </div>
+  
+          </div>
+  
+        </div>
+      </section>
+
+    <!-- End Services Section -->
+
+  
+
+{% endblock %}
+

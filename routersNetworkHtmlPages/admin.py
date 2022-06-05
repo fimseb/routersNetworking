@@ -19,5 +19,7 @@ admin.site.register(News)
 admin.site.register(Query, QueryAdmin)
 admin.site.register(Subscribe)
 admin.site.register(DOT)
+admin.site.register(Hardware)
+admin.site.register(hardware_photo)
 
 

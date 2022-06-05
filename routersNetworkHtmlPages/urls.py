@@ -13,7 +13,8 @@ urlpatterns = [
     path('contact/', views.contact),
     path('district/', views.district),
     path('contact_form/', views.contact_form_data),
-
+    path('hardware/detail/<id>', views.hardware_detail, name='hardware-detail'),
+    #  path('articles/<int:year>/', views.year_archive, name='news-year-archive'),
     path('subscribe/', views.subscribe),
    
 #    [z-zA-Z0-9*]

@@ -1,7 +1,7 @@
 from datetime import date
 from django.http import JsonResponse
 from django.shortcuts import render
-from routersNetworkHtmlPages.models import State, District, Testimonial, News, DOT
+from routersNetworkHtmlPages.models import State, District, Testimonial, News, DOT, Hardware
 from .models import DOT, Query, Subscribe
 from django.views.decorators.csrf import csrf_exempt
 import json
@@ -40,13 +40,14 @@ def technical(request):
 
 
 def news(request):
-    news = News.objects.all().order_by('-date','-time')
-    dots = DOT.objects.all().order_by('-date','-time')
+    news = News.objects.all().order_by('-date','-time')[:25]
+    dots = DOT.objects.all().order_by('-date','-time')[:25]
     for i in news:
         print(i)
     for i in dots:
         print(i)
-    return render(request, 'routersNetworkHtmlPages/news.html', context={'news': news, 'dots': dots, 'path' : 'media/'})
+    hardware_list = Hardware.objects.all().order_by('-created_date')[:20]
+    return render(request, 'routersNetworkHtmlPages/news.html', context={'news': news, 'dots': dots, 'path' : 'media/', 'hardware_list_obj': hardware_list})
 
 
 def contact(request):
@@ -55,6 +56,11 @@ def contact(request):
         print(s.state_id, s.state)
     return render(request, 'routersNetworkHtmlPages/contact.html', context= {'state_obj':states})
     
+
+def hardware_detail(request,id):
+    obj = Hardware.objects.get(hardware_id=id)
+    print(obj)
+    return render(request, 'routersNetworkHtmlPages/detail.html', context={'path':'media/','obj':obj})
 
 def district(request):
     state_id = request.GET['state']
@@ -103,4 +109,4 @@ def contact_form_data(request):
         print('-------------------->    run')
         return JsonResponse({'valid':''})
     return JsonResponse({'valid':''})
-        
+
